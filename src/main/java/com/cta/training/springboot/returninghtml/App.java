@@ -18,7 +18,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class App {
 
-
+    public static void main(String[] args) {
+        new SpringApplicationBuilder().sources(App.class).bannerMode(Banner.Mode.OFF).run();
+    }
 
     @RequestMapping(method= RequestMethod.GET, path="/hello")
     public String hello(Model model){

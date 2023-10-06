@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("customers")
 public class App {
 
+    public static void main(String[] args) {
+        new SpringApplicationBuilder().sources(App.class).run();
+    }
 
     @GetMapping(value = "/{id}", produces = "application/json")
     public @ResponseBody Customer returnCustomer(@PathVariable int id){
